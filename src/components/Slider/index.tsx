@@ -1,10 +1,15 @@
 import { memo, useEffect, useState } from "react";
 import Swiper from "swiper";
 import 'swiper/swiper.min.css'
-import { banner } from "utils/interface";
+import { IBannerList } from "utils/interface";
 import { SliderContainer } from "./style";
 
-function Slider(props: { bannerList: banner[] }) {
+interface ISliderProp {
+  bannerList: IBannerList;
+}
+
+
+function Slider(props: ISliderProp) {
   const [sliderSwiper, setSliderSwiper] = useState<Swiper | null>(null)
   const { bannerList } = props
   useEffect(() => {

@@ -1,5 +1,15 @@
 // banner 图
-export interface banner {
+export interface IBannerListItem {
   imageUrl: string;
-  [propName: string]: any
 }
+
+export interface IRecommendListItem {
+  id: string;
+  picUrl: string,
+  name: string,
+  playCount: number;
+}
+
+export type IBannerList = IBannerListItem[];
+
+export type IRecommendList = IRecommendListItem[];
